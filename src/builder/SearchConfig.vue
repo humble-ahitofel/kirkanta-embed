@@ -59,7 +59,7 @@
 
     <div class="ml-3 mb-3">
       <b-form-checkbox v-model="pagingEnabled" :value="true" :unchecked-value="false">
-        Use paging
+        {{ $t('builder.use-paging') }}
       </b-form-checkbox>
     </div>
   </div>

@@ -128,13 +128,7 @@ async function kirjastohakemisto (element) {
       // Add 20 px to work around Firefox's margin collapse.
       sandbox.style.height = widget.offsetHeight + 'px'
     }
-
-    if (typeof ResizeObserver === 'function') {
-      let observer = new ResizeObserver(onResize)
-      observer.observe(widget)
-    } else {
-      let observer = new ResizeSensor(widget, onResize)
-    }
+    let observer = new ResizeSensor(widget, onResize)
   }
 
   function addAttribution (container) {
